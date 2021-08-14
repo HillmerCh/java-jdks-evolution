@@ -1,10 +1,10 @@
-package co.hillmerch.evolution;
+package co.hillmerch.evolution.jdks;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
-import co.hillmerch.evolution.dtos.Product;
-import co.hillmerch.evolution.records.ProductJDK16;
+import co.hillmerch.evolution.jdks.dtos.Product;
+import co.hillmerch.evolution.jdks.records.ProductJDK16;
 
 public class SomeFeatures {
 

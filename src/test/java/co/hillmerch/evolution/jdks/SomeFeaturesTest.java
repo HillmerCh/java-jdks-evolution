@@ -1,12 +1,12 @@
-package co.hillmerch.evolution;
+package co.hillmerch.evolution.jdks;
 
 import java.util.List;
-import java.util.logging.Logger;
 
 import org.junit.jupiter.api.Test;
 
-import co.hillmerch.evolution.dtos.Product;
-import co.hillmerch.evolution.records.ProductJDK16;
+import co.hillmerch.evolution.jdks.SomeFeatures;
+import co.hillmerch.evolution.jdks.dtos.Product;
+import co.hillmerch.evolution.jdks.records.ProductJDK16;
 
 import static org.junit.jupiter.api.Assertions.assertThrows;
 

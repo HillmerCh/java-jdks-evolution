@@ -1,4 +1,4 @@
-package co.hillmerch.evolution.dtos;
+package co.hillmerch.evolution.jdks.dtos;
 
 public class Product {
 	private String name;
