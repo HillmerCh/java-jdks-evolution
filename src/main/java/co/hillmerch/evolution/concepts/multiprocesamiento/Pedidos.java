@@ -1,4 +1,4 @@
-package co.hillmerch.evolution.concepts;
+package co.hillmerch.evolution.concepts.multiprocesamiento;
 
 import java.util.List;
 import java.util.Random;
@@ -10,9 +10,8 @@ import java.util.stream.LongStream;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-public class Multiprocesamiento {
-
-	private static final Logger LOGGER = LogManager.getLogger( Multiprocesamiento.class );
+public class Pedidos {
+	private static final Logger LOGGER = LogManager.getLogger( Pedidos.class );
 
 	void enviarPedidosUnSoloHilo(){
 		List<Long> pedidos = consultarPedidos();
@@ -62,16 +61,13 @@ public class Multiprocesamiento {
 
 	private void sleep() {
 		try {
-			Random r = new Random();
-			Thread.sleep(r.nextInt(10) * 1000);
+			Thread.sleep((new Random()).nextInt(10) * 1000L);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
 	}
 
-
 	private List<Long> consultarPedidos() {
 		return LongStream.rangeClosed( 1, 10 ).boxed().toList();
 	}
-
 }
