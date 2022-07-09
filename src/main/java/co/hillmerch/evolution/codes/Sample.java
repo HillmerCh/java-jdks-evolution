@@ -7,7 +7,7 @@ import java.util.List;
 
 public class Sample {
 
-	// Imprimir el maximo numero de una lista
+	// Imprimir el número máximo de una lista
 	void printMax() {
 		//JDK5
 		var numbers = List.of(1L, 2L, 3L, 4L, 5L);

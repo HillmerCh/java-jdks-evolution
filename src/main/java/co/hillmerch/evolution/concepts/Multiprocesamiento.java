@@ -10,9 +10,9 @@ import java.util.stream.LongStream;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-public class Multithreading {
+public class Multiprocesamiento {
 
-	private static final Logger LOGGER = LogManager.getLogger( Multithreading.class );
+	private static final Logger LOGGER = LogManager.getLogger( Multiprocesamiento.class );
 
 	void enviarPedidosUnSoloHilo(){
 		List<Long> pedidos = consultarPedidos();
@@ -33,7 +33,7 @@ public class Multithreading {
 		}
 	}
 
-	void enviarPedidosConFuture(){
+	void enviarPedidosConExecutor(){
 		List<Long> pedidos = consultarPedidos();
 		LOGGER.debug( "Número de pedidos: {}" , pedidos.size() );
 		ExecutorService executor = Executors.newFixedThreadPool( 2 );
@@ -50,7 +50,7 @@ public class Multithreading {
 		ExecutorService executor = Executors.newFixedThreadPool( 2 );
 
 		for ( Long pedido : pedidos ) {
-			CompletableFuture.runAsync( () -> this.generarOrdenDeEnvio( pedido) );
+			CompletableFuture.runAsync( () -> this.generarOrdenDeEnvio( pedido), executor );
 		}
 	}
 

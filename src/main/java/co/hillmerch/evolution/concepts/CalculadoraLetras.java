@@ -2,30 +2,33 @@ package co.hillmerch.evolution.concepts;
 
 public class CalculadoraLetras  extends Calculadora{
 
+	/*
+	* El método sumarNumeros usar herencia para sobreescribir el método definido en Calculadora.java
+	* */
 	void sumarNumeros(int n1, int n2){
 		int resultado = n1 + n2;
 
-		System.out.println(getNameOfANumber(resultado));
+		System.out.println(convertirNumeroEnLetras(resultado));
 	}
 
-	private String getNameOfANumber(int number){
+	private String convertirNumeroEnLetras(int number){
 		if (number==1){
-			return "ONE";
+			return "UNO";
 		}
 
 		if (number==2){
-			return "TWO";
+			return "DOS";
 		}
 
 		if (number==3){
-			return "THREE";
+			return "TRES";
 		}
 
 		if (number==4){
-			return "FOUR";
+			return "CUATRO";
 		}
 
-		return "UNDEFINED";
+		return "INDEFINIDO";
 	}
 
 }

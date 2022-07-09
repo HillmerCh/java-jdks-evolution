@@ -5,20 +5,18 @@ import org.junit.jupiter.api.Test;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import static org.junit.jupiter.api.Assertions.*;
+class MultiprocesamientoTest {
 
-class MultithreadingTest {
-
-	private static final Logger LOGGER = LogManager.getLogger( MultithreadingTest.class );
+	private static final Logger LOGGER = LogManager.getLogger( MultiprocesamientoTest.class );
 
 	@Test
 	void enviarPedidos() {
 
-		Multithreading multithreading = new Multithreading();
+		Multiprocesamiento multiprocesamiento = new Multiprocesamiento();
 
 		LOGGER.debug( "Inicia el llamado ejecución" );
 
-		multithreading.enviarPedidos();
+		multiprocesamiento.enviarPedidos();
 
 		LOGGER.debug( "Finaliza el llamado de la ejecución" );
 
