@@ -1,4 +1,4 @@
-package co.hillmerch.evolution.arting.entity;
+package co.hillmerch.evolution.refactor.entity;
 
 import java.time.LocalDate;
 
@@ -64,5 +64,9 @@ public class SolicitudContratacion {
 
 	public void setEstado(Estado estado) {
 		this.estado = estado;
+	}
+
+	public boolean isSolicitudContratacionPendiente() {
+		return this.estado.equals( SolicitudContratacion.Estado.PENDIENTE );
 	}
 }

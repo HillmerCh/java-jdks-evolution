@@ -54,6 +54,7 @@ public class Evolucion {
 
 	void imprimirNumeros(){
 	}
+
 	void imprimirNumeros_4(){
 		var numeros = Stream.of( 1D, 2D, 3.5D, 4D, 5D ).toList();
 		numeros.forEach( System.out::println );
@@ -85,7 +86,6 @@ public class Evolucion {
 			System.out.println(numeros.get( i ));
 		}
 	}
-
 
 
 }
