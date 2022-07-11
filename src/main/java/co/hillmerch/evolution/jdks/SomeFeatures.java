@@ -20,7 +20,6 @@ public class SomeFeatures {
 		return number1 + number2;
 	}
 
-
 	public static Long getDiscount(CustomerType myType) {
 		if ( myType.equals( CustomerType.NONPROFIT ) || myType.equals( CustomerType.MILITARY ) ) {
 			return 10L;
@@ -47,7 +46,6 @@ public class SomeFeatures {
 
 	}
 
-
 	public static String buildJPQL() {
 
 		String sql = "SELECT o, p, q  \n";
@@ -71,7 +69,6 @@ public class SomeFeatures {
 
 		return sql;
 	}
-
 
 	public static String getProductName(Object anyObject) {
 		if ( anyObject instanceof Product ) {
@@ -99,7 +96,6 @@ public class SomeFeatures {
 		}
 	}
 
-
 	public static Product buildProduct(String name, Double price) {
 		return new Product( name, price );
 	}
@@ -108,7 +104,6 @@ public class SomeFeatures {
 		return new ProductJDK16( name, price );
 	}
 
-
 	public static List<String> getProductNames(List<Product> productJDK16s) {
 		return productJDK16s.stream().map( Product::getName ).collect( Collectors.toList() );
 	}
@@ -116,6 +111,5 @@ public class SomeFeatures {
 	public static List<String> getProductNamesJDK16(List<ProductJDK16> productJDK16s) {
 		return productJDK16s.stream().map( ProductJDK16::name ).toList();
 	}
-
 
 }
